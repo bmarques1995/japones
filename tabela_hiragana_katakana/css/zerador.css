@@ -1,0 +1,19 @@
+*{
+    border-collapse: collapse;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+/* esconde barra de rolagem */
+body{
+    -ms-overflow-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body::-webkit-scrollbar{
+    width: 0 !important;
+}
+/**/

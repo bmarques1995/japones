@@ -1,0 +1,29 @@
+<!--
+    * Eventos:
+    * oninput
+    * onclick
+-->
+<!DOCTYPE html>
+<html lang='pt-br'>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/zerador.css">
+        <link rel="stylesheet" href="css/pag.css">
+    </head>
+    <body>
+        <div class='form' id='envio-kanji'>
+            <p id="msg"></p>
+            <label>
+                <p>Símbolo:</p>
+                <input type="text" maxlength="1" placeholder="Insira o kanji" id='simbolo' oninput='verificaInsercao()'>
+                <p id="log-ins" value='0' contenteditable="false"></p>
+            </label>
+            <button type="button" class='btn' onclick="envio()">Adicionar</button>
+        </div>
+        <div id="log">
+            Área de testes
+        </div>
+    </body>
+    <script src='js/envio.min.js'></script>
+    <script src='js/ajax.min.js'></script>
+</html>

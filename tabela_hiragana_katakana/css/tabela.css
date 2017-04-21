@@ -1,0 +1,51 @@
+@font-face{
+    font-family: indie;
+    src: url("../fonts/IndieFlower.ttf");
+}
+.kana{
+    margin-top: 7px;
+    display: none;
+}
+.kana.vis{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+thead, tbody, tr, th, td{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+tr{
+    flex-direction: row;
+}
+.kana,.kana th,.kana td{
+    text-transform: lowercase;
+    font-weight: 100;
+    font-family: indie;
+    color: #fff;
+    font-size: 20px;
+}
+.pri{
+    background: #02E182;
+}
+.sec{
+    background: #5B80D1;
+}
+.ter{
+    background: #D75A56;
+}
+.qua{
+    background: #F39C12;
+}
+.qui{
+    background: #F17AA0;
+}
+.kana tr:first-child th:first-child{
+    background: #9898EA;
+}
+.kana th,.kana td{
+    width: 20%;
+    padding: 4px 0;
+    text-align: center;
+}

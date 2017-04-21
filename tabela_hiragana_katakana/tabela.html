@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <meta author='Bruno Silva Marques' content='baseado no css do site http://www.icosite.com.br'>
+        <link rel="stylesheet" href="css/zerador.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/tabela.css">
+    </head>
+    <body>
+        <header class='topo'>
+            <nav class="menu">
+                <ul class='menu-item'>
+                    <li id='hiragana' onmouseover="submenu(this.id)">Hiragana</li>
+                    <li id='katakana' onmouseover="submenu(this.id)">Katakana</li>
+                </ul>
+                <ul class='menu-subitem' id='menu-hiragana' onmouseover="console.log(5)">
+                    <li onclick="escondeMostra('hiragana-simples')">Simples</li>
+                    <li onclick="escondeMostra('hiragana-juncao')">Junção</li>
+                    <li onclick="escondeMostra('hiragana-mod')">Modificação</li>
+                </ul>
+                <ul class='menu-subitem' id='menu-katakana'>
+                    <li onclick="escondeMostra('katakana-simples')">Simples</li>
+                    <li onclick="escondeMostra('katakana-juncao')">Junção</li>
+                    <li onclick="escondeMostra('katakana-mod')">Modificação</li>
+                </ul>
+                <!--<ul class="item">
+                    <li class="menu">Hiragana
+                        <ul class="subitem">
+                            <li class="submenu" onclick="escondeMostra('hiragana-simples')">Simples</li>
+                            <li class="submenu" onclick="escondeMostra('hiragana-juncao')">Junção</li>
+                            <li class="submenu" onclick="escondeMostra('hiragana-mod')">Modificação</li>
+                        </ul>
+                    </li>
+                    <li class="menu">Katakana
+                        <ul class="subitem">
+                            <li class="submenu" onclick="escondeMostra('katakana-simples')">Simples</li>
+                            <li class="submenu" onclick="escondeMostra('katakana-juncao')">Junção</li>
+                            <li class="submenu" onclick="escondeMostra('katakana-mod')">Modificação</li>
+                        </ul>
+                    </li>
+                </ul>-->
+            </nav>
+        </header>
+        <table id='hiragana-simples' class='kana vis'>
+            <thead>
+                <tr>
+                    <th colspan='5'>Hiragana</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="pri">A</td>
+                    <td class="sec">E</td>
+                    <td class="ter">I</td>
+                    <td class="qua">O</td>
+                    <td class="qui">U</td>
+                </tr>
+                <tr>
+                    <td class="pri">あ</td>
+                    <td class="sec">え</td>
+                    <td class="ter">い</td>
+                    <td class="qua">お</td>
+                    <td class="qui">う</td>
+                </tr>
+                <tr>
+                    <td class="pri">KA</td>
+                    <td class="sec">KE</td>
+                    <td class="ter">KI</td>
+                    <td class="qua">KO</td>
+                    <td class="qui">KU</td>
+                </tr>
+                <tr>
+                    <td class="pri">か</td>
+                    <td class="sec">け</td>
+                    <td class="ter">き</td>
+                    <td class="qua">こ</td>
+                    <td class="qui">く</td>
+                </tr>
+                <tr>
+                    <td class="pri">SA</td>
+                    <td class="sec">SE</td>
+                    <td class="ter">SHI</td>
+                    <td class="qua">SO</td>
+                    <td class="qui">SU</td>
+                </tr>
+                <tr>
+                    <td class="pri">さ</td>
+                    <td class="sec">せ</td>
+                    <td class="ter">し</td>
+                    <td class="qua">そ</td>
+                    <td class="qui">す</td>
+                </tr>
+                <tr>
+                    <td class="pri">TA</td>
+                    <td class="sec">TE</td>
+                    <td class="ter">CHI</td>
+                    <td class="qua">TO</td>
+                    <td class="qui">TSU</td>
+                </tr>
+                <tr>
+                    <td class="pri">た</td>
+                    <td class="sec">て</td>
+                    <td class="ter">ち</td>
+                    <td class="qua">と</td>
+                    <td class="qui">つ</td>
+                </tr>
+                <tr>
+                    <td class="pri">NA</td>
+                    <td class="sec">NE</td>
+                    <td class="ter">NI</td>
+                    <td class="qua">NO</td>
+                    <td class="qui">NU</td>
+                </tr>
+                <tr>
+                    <td class="pri">な</td>
+                    <td class="sec">ね</td>
+                    <td class="ter">に</td>
+                    <td class="qua">の</td>
+                    <td class="qui">ぬ</td>
+                </tr>
+                <tr>
+                    <td class="pri">HA</td>
+                    <td class="sec">HE</td>
+                    <td class="ter">HI</td>
+                    <td class="qua">HO</td>
+                    <td class="qui">FU</td>
+                </tr>
+                <tr>
+                    <td class="pri">は</td>
+                    <td class="sec">へ</td>
+                    <td class="ter">ひ</td>
+                    <td class="qua">ほ</td>
+                    <td class="qui">ふ</td>
+                </tr>
+                <tr>
+                    <td class="pri">MA</td>
+                    <td class="sec">ME</td>
+                    <td class="ter">MI</td>
+                    <td class="qua">MO</td>
+                    <td class="qui">MU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ま</td>
+                    <td class="sec">め</td>
+                    <td class="ter">み</td>
+                    <td class="qua">も</td>
+                    <td class="qui">む</td>
+                </tr>
+                <tr>
+                    <td class="pri">YA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">YO</td>
+                    <td class="qui">YU</td>
+                </tr>
+                <tr>
+                    <td class="pri">や</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">よ</td>
+                    <td class="qui">ゆ</td>
+                </tr>
+                <tr>
+                    <td class="pri">RA</td>
+                    <td class="sec">RE</td>
+                    <td class="ter">RI</td>
+                    <td class="qua">RO</td>
+                    <td class="qui">RU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ら</td>
+                    <td class="sec">れ</td>
+                    <td class="ter">り</td>
+                    <td class="qua">ろ</td>
+                    <td class="qui">る</td>
+                </tr>
+                <tr>
+                    <td class="pri">WA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">WO</td>
+                    <td class="qui"></td>
+                </tr>
+                <tr>
+                    <td class="pri">わ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">を</td>
+                    <td class="qui"></td>
+                </tr>
+                <tr>
+                    <td class="pri">N</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua"></td>
+                    <td class="qui"></td>
+                </tr>
+                <tr>
+                    <td class="pri">ん</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua"></td>
+                    <td class="qui"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table id='hiragana-juncao' class='kana'>
+            <thead>
+                <tr>
+                    <th colspan="5">Hiragana junções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="pri">BYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">BYO</td>
+                    <td class="qui">BYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">びゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">びょ</td>
+                    <td class="qui">びゅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">CHA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">CHO</td>
+                    <td class="qui">CHU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ちゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ちょ</td>
+                    <td class="qui">ちゅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">DYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">DYO</td>
+                    <td class="qui">DYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ぢゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ぢょ</td>
+                    <td class="qui">ぢゅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">GYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">GYO</td>
+                    <td class="qui">GYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ぎゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ぎょ</td>
+                    <td class="qui">ぎゅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">HYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">HYO</td>
+                    <td class="qui">HYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ひゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ひょ</td>
+                    <td class="qui">ひゅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">JA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">JO</td>
+                    <td class="qui">JU</td>
+                </tr>
+                <tr>
+                    <td class="pri">じゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">じょ</td>
+                    <td class="qui">じゅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">KYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">KYO</td>
+                    <td class="qui">KYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">きゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">きょ</td>
+                    <td class="qui">きゅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">MYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">MYO</td>
+                    <td class="qui">MYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">みゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">みょ</td>
+                    <td class="qui">みゅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">NYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">NYO</td>
+                    <td class="qui">NYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">にゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">にょ</td>
+                    <td class="qui">にゅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">PYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">PYO</td>
+                    <td class="qui">PYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ぴゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ぴょ</td>
+                    <td class="qui">ぴゅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">RYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">RYO</td>
+                    <td class="qui">RYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">りゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">りょ</td>
+                    <td class="qui">りゅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">SHA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">SHO</td>
+                    <td class="qui">SHU</td>
+                </tr>
+                <tr>
+                    <td class="pri">しゃ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">しょ</td>
+                    <td class="qui">しゅ</td>
+                </tr>
+            </tbody>
+        </table>
+        <table id='hiragana-mod' class='kana'>
+            <thead>
+                <tr>
+                    <th colspan="5">Hiragana com sinais de modificação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="pri">BA</td>
+                    <td class="sec">BE</td>
+                    <td class="ter">BI</td>
+                    <td class="qua">BO</td>
+                    <td class="qui">BU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ば</td>
+                    <td class="sec">べ</td>
+                    <td class="ter">び</td>
+                    <td class="qua">ぼ</td>
+                    <td class="qui">ぶ</td>
+                </tr>
+                <tr>
+                    <td class="pri">DA</td>
+                    <td class="sec">DE</td>
+                    <td class="ter">DI</td>
+                    <td class="qua">DO</td>
+                    <td class="qui">DZU</td>
+                </tr>
+                <tr>
+                    <td class="pri">だ</td>
+                    <td class="sec">で</td>
+                    <td class="ter">ぢ</td>
+                    <td class="qua">ど</td>
+                    <td class="qui">づ</td>
+                </tr>
+                <tr>
+                    <td class="pri">GA</td>
+                    <td class="sec">GE</td>
+                    <td class="ter">GI</td>
+                    <td class="qua">GO</td>
+                    <td class="qui">GU</td>
+                </tr>
+                <tr>
+                    <td class="pri">が</td>
+                    <td class="sec">げ</td>
+                    <td class="ter">ぎ</td>
+                    <td class="qua">ご</td>
+                    <td class="qui">ぐ</td>
+                </tr>
+                <tr>
+                    <td class="pri">PA</td>
+                    <td class="sec">PE</td>
+                    <td class="ter">PI</td>
+                    <td class="qua">PO</td>
+                    <td class="qui">PU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ぱ</td>
+                    <td class="sec">ぺ</td>
+                    <td class="ter">ぴ</td>
+                    <td class="qua">ぽ</td>
+                    <td class="qui">ぷ</td>
+                </tr>
+                <tr>
+                    <td class="pri">ZA</td>
+                    <td class="sec">ZE</td>
+                    <td class="ter">JI</td>
+                    <td class="qua">ZO</td>
+                    <td class="qui">ZU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ざ</td>
+                    <td class="sec">ぜ</td>
+                    <td class="ter">じ</td>
+                    <td class="qua">ぞ</td>
+                    <td class="qui">ず</td>
+                </tr>
+            </tbody>
+        </table>
+        <table id='katakana-simples' class='kana'>
+            <thead>
+                <tr>
+                    <th colspan='5'>katakana</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="pri">A</td>
+                    <td class="sec">E</td>
+                    <td class="ter">I</td>
+                    <td class="qua">O</td>
+                    <td class="qui">U</td>
+                </tr>
+                <tr>
+                    <td class="pri">ア</td>
+                    <td class="sec">エ</td>
+                    <td class="ter">イ</td>
+                    <td class="qua">オ</td>
+                    <td class="qui">ウ</td>
+                </tr>
+                <tr>
+                    <td class="pri">KA</td>
+                    <td class="sec">KE</td>
+                    <td class="ter">KI</td>
+                    <td class="qua">KO</td>
+                    <td class="qui">KU</td>
+                </tr>
+                <tr>
+                    <td class="pri">カ</td>
+                    <td class="sec">ケ</td>
+                    <td class="ter">キ</td>
+                    <td class="qua">コ</td>
+                    <td class="qui">ク</td>
+                </tr>
+                <tr>
+                    <td class="pri">SA</td>
+                    <td class="sec">SE</td>
+                    <td class="ter">SHI</td>
+                    <td class="qua">SO</td>
+                    <td class="qui">SU</td>
+                </tr>
+                <tr>
+                    <td class="pri">サ</td>
+                    <td class="sec">セ</td>
+                    <td class="ter">シ</td>
+                    <td class="qua">ソ</td>
+                    <td class="qui">ス</td>
+                </tr>
+                <tr>
+                    <td class="pri">TA</td>
+                    <td class="sec">TE</td>
+                    <td class="ter">CHI</td>
+                    <td class="qua">TO</td>
+                    <td class="qui">TSU</td>
+                </tr>
+                <tr>
+                    <td class="pri">タ</td>
+                    <td class="sec">テ</td>
+                    <td class="ter">チ</td>
+                    <td class="qua">ト</td>
+                    <td class="qui">ツ</td>
+                </tr>
+                <tr>
+                    <td class="pri">NA</td>
+                    <td class="sec">NE</td>
+                    <td class="ter">NI</td>
+                    <td class="qua">NO</td>
+                    <td class="qui">NU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ナ</td>
+                    <td class="sec">ネ</td>
+                    <td class="ter">ニ</td>
+                    <td class="qua">ノ</td>
+                    <td class="qui">ヌ</td>
+                </tr>
+                <tr>
+                    <td class="pri">HA</td>
+                    <td class="sec">HE</td>
+                    <td class="ter">HI</td>
+                    <td class="qua">HO</td>
+                    <td class="qui">FU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ハ</td>
+                    <td class="sec">ヘ</td>
+                    <td class="ter">ヒ</td>
+                    <td class="qua">ホ</td>
+                    <td class="qui">フ</td>
+                </tr>
+                <tr>
+                    <td class="pri">MA</td>
+                    <td class="sec">ME</td>
+                    <td class="ter">MI</td>
+                    <td class="qua">MO</td>
+                    <td class="qui">MU</td>
+                </tr>
+                <tr>
+                    <td class="pri">マ</td>
+                    <td class="sec">メ</td>
+                    <td class="ter">ミ</td>
+                    <td class="qua">モ</td>
+                    <td class="qui">ム</td>
+                </tr>
+                <tr>
+                    <td class="pri">YA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">YO</td>
+                    <td class="qui">YU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ヤ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ヨ</td>
+                    <td class="qui">ユ</td>
+                </tr>
+                <tr>
+                    <td class="pri">RA</td>
+                    <td class="sec">RE</td>
+                    <td class="ter">RI</td>
+                    <td class="qua">RO</td>
+                    <td class="qui">RU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ラ</td>
+                    <td class="sec">レ</td>
+                    <td class="ter">リ</td>
+                    <td class="qua">ロ</td>
+                    <td class="qui">ル</td>
+                </tr>
+                <tr>
+                    <td class="pri">WA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">WO</td>
+                    <td class="qui"></td>
+                </tr>
+                <tr>
+                    <td class="pri">ワ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ヲ</td>
+                    <td class="qui"></td>
+                </tr>
+                <tr>
+                    <td class="pri">N</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua"></td>
+                    <td class="qui"></td>
+                </tr>
+                <tr>
+                    <td class="pri">ン</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua"></td>
+                    <td class="qui"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table id='katakana-juncao' class='kana'>
+            <thead>
+                <tr>
+                    <th colspan="5">Katakana junções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="pri">BYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">BYO</td>
+                    <td class="qui">BYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ビャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ビョ</td>
+                    <td class="qui">ビュ</td>
+                </tr>
+                <tr>
+                    <td class="pri">CHA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">CHO</td>
+                    <td class="qui">CHU</td>
+                </tr>
+                <tr>
+                    <td class="pri">チャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">チョ</td>
+                    <td class="qui">チュ</td>
+                </tr>
+                <tr>
+                    <td class="pri">DYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">DYO</td>
+                    <td class="qui">DYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ヂャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ヂョ</td>
+                    <td class="qui">ヂュ</td>
+                </tr>
+                <tr>
+                    <td class="pri">GYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">GYO</td>
+                    <td class="qui">GYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ギャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ギョ</td>
+                    <td class="qui">ギュ</td>
+                </tr>
+                <tr>
+                    <td class="pri">HYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">HYO</td>
+                    <td class="qui">HYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ヒャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ヒョ</td>
+                    <td class="qui">ヒュ</td>
+                </tr>
+                <tr>
+                    <td class="pri">JA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">JO</td>
+                    <td class="qui">JU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ジャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ジョ</td>
+                    <td class="qui">ジュ</td>
+                </tr>
+                <tr>
+                    <td class="pri">KYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">KYO</td>
+                    <td class="qui">KYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">キャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">キョ</td>
+                    <td class="qui">キュ</td>
+                </tr>
+                <tr>
+                    <td class="pri">MYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">MYO</td>
+                    <td class="qui">MYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ミャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ミョ</td>
+                    <td class="qui">ミュ</td>
+                </tr>
+                <tr>
+                    <td class="pri">NYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">NYO</td>
+                    <td class="qui">NYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ニャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ニョ</td>
+                    <td class="qui">ニュ</td>
+                </tr>
+                <tr>
+                    <td class="pri">PYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">PYO</td>
+                    <td class="qui">PYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ピャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ピョ</td>
+                    <td class="qui">ピュ</td>
+                </tr>
+                <tr>
+                    <td class="pri">RYA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">RYO</td>
+                    <td class="qui">RYU</td>
+                </tr>
+                <tr>
+                    <td class="pri">リャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">リョ</td>
+                    <td class="qui">リュ</td>
+                </tr>
+                <tr>
+                    <td class="pri">SHA</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">SHO</td>
+                    <td class="qui">SHU</td>
+                </tr>
+                <tr>
+                    <td class="pri">シャ</td>
+                    <td class="sec"></td>
+                    <td class="ter"></td>
+                    <td class="qua">ショ</td>
+                    <td class="qui">シュ</td>
+                </tr>
+            </tbody>
+        </table>
+        <table id="katakana-mod" class="kana">
+            <thead>
+                <tr>
+                    <th colspan="5">Katakana com sinais de modificação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="pri">BA</td>
+                    <td class="sec">BE</td>
+                    <td class="ter">BI</td>
+                    <td class="qua">BO</td>
+                    <td class="qui">BU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ア</td>
+                    <td class="sec">ベ</td>
+                    <td class="ter">ビ</td>
+                    <td class="qua">ボ</td>
+                    <td class="qui">ブ</td>
+                </tr>
+                <tr>
+                    <td class="pri">DA</td>
+                    <td class="sec">DE</td>
+                    <td class="ter">DI</td>
+                    <td class="qua">DO</td>
+                    <td class="qui">DZU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ダ</td>
+                    <td class="sec">デ</td>
+                    <td class="ter">ヂ</td>
+                    <td class="qua">ド</td>
+                    <td class="qui">ヅ</td>
+                </tr>
+                <tr>
+                    <td class="pri">GA</td>
+                    <td class="sec">GE</td>
+                    <td class="ter">GI</td>
+                    <td class="qua">GO</td>
+                    <td class="qui">GU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ガ</td>
+                    <td class="sec">ゲ</td>
+                    <td class="ter">ギ</td>
+                    <td class="qua">ゴ</td>
+                    <td class="qui">グ</td>
+                </tr>
+                <tr>
+                    <td class="pri">PA</td>
+                    <td class="sec">PE</td>
+                    <td class="ter">PI</td>
+                    <td class="qua">PO</td>
+                    <td class="qui">PU</td>
+                </tr>
+                <tr>
+                    <td class="pri">パ</td>
+                    <td class="sec">ペ</td>
+                    <td class="ter">ピ</td>
+                    <td class="qua">ポ</td>
+                    <td class="qui">プ</td>
+                </tr>
+                <tr>
+                    <td class="pri">ZA</td>
+                    <td class="sec">ZE</td>
+                    <td class="ter">JI</td>
+                    <td class="qua">ZO</td>
+                    <td class="qui">ZU</td>
+                </tr>
+                <tr>
+                    <td class="pri">ザ</td>
+                    <td class="sec">ゼ</td>
+                    <td class="ter">ジ</td>
+                    <td class="qua">ゾ</td>
+                    <td class="qui">ズ</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+    <script src="js/vis.js"></script>
+</html>

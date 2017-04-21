@@ -1,0 +1,21 @@
+.topo{
+    display: flex;
+    width: 100vw;
+    background: #1E824C;
+    justify-content: center;
+}
+.menu-item,.menu-subitem{
+    display: flex;
+}
+.menu-subitem.inv{
+    display: none;
+}
+.menu-item li,.menu-subitem li{
+    padding: 7px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+}
+.menu{
+    flex: 0.5;
+}
